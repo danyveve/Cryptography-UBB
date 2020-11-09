@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery-3.3.1.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <script src="validity-constraints.js"></script>
+    <script src="util.js"></script>
+    <script src="rsa.js"></script>
+</head>
+
+<body>
+<div class="col-sm-4 offset-sm-4 align-middle">
+    <div class="mainDiv">
+        <h1 class="text-info text-center">RSA</h1>
+
+        <div class="encryptDiv">
+            <h1 class="text-info text-center">Encrypt a message</h1>
+            <form id="encryptForm">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="plaintext">Plain text: <br> (only lower case letters from a to z and spaces)</label>
+                        <textarea required class="form-control" id="plaintext"
+                                  onkeyup="this.value = this.value.toLowerCase();"
+                                  pattern="[a-z ]+"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-info">Encrypt</button>
+            </form>
+            <div class="form-group">
+                <label for="encryptresult">Encryption result:</label>
+                <textarea readonly class="form-control" id="encryptresult"></textarea>
+            </div>
+        </div>
+        <hr>
+        <div class="decryptDiv">
+            <h1 class="text-info text-center">Decrypt a message</h1>
+            <form id="decryptForm">
+                <div class="form-group">
+                    <div class="form-group">
+                        <label for="ciphertext">Cipher text:</label>
+                        <textarea required class="form-control" id="ciphertext"
+                                  onkeyup="this.value = this.value.toLowerCase();"
+                                  pattern="[a-z ]+"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-info">Decrypt</button>
+            </form>
+            <div class="form-group">
+                <label for="decryptresult">Decryption result:</label>
+                <textarea readonly class="form-control" id="decryptresult"></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

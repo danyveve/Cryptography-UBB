@@ -1,0 +1,19 @@
+Euclidean algorithm:
+	gcd(m,n) 1 <= m <= n
+	gcd(m,n) = gcd(  n mod m  , m)
+		      rest operations
+		n = l * floor(n/m) + n mod m
+
+Extended Euclidean algorithm:
+	gcd(m,n) = alpha * m + beta * n ; alpha,beta -> Z
+					   m,n -> N
+
+Euler function:
+	counts how many numbers from 1 to n are not divisors of n.
+
+	a*x = 1 (mod n)
+	has no solution when gcd(a,n) != 1
+	solution => x = a ^ -1
+
+
+	

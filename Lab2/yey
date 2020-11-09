@@ -1,0 +1,8 @@
+n = composite
+
+b   1 < b < n
+
+gcd(b,n) = 1
+
+
+b ^ (n-1) mod n = 1
